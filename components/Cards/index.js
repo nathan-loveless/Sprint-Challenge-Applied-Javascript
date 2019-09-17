@@ -22,12 +22,12 @@ axios.get(`https://lambda-times-backend.herokuapp.com/articles`)
 .then(response => {
 
     const articles = document.querySelector('.cards-container');
-    console.log(response.data.articles);
+     console.log(response.data.articles);
     response.data.articles.bootstrap.forEach(element => { articles.appendChild(createArticles(element, articles));});
     response.data.articles.javascript.forEach(element => { articles.appendChild(createArticles(element, articles));});
     response.data.articles.jquery.forEach(element => { articles.appendChild(createArticles(element, articles));});
     response.data.articles.node.forEach(element => { articles.appendChild(createArticles(element, articles));});
-    response.data.articles.technology.forEach(element => { articles.appendChild(createArticles(element, articles));});    
+    response.data.articles.technology.forEach(element => { articles.appendChild(createArticles(element, articles));}); 
 })    
 .catch(err => {
   console.log(`Error: ${err}`);
